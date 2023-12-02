@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Martel', serif;
+}
+
+body {
+    background-image: url("italy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.rectangle {
+  width: 60%;
+  height: 1480px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 80px;
+  margin-top: 400px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact i {
+  font-size: 20px;
+  color: #164088;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.subsection {
+  color: #be5f36;
+  border-bottom: 2px solid #be5f36;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+h1 {
+  text-align: center;
+  color: #164088;
+  margin-bottom: 10px;
+}
+.details {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #be5f36;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin: 5px 0;
+  color: #333;
+}
+.project {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.email-phone-button {
+  display: inline-block;
+  padding: 10px 40px;
+  text-decoration: none;
+  background-color: #164088; 
+  color: white;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+.email-phone-button-1 {
+  display: inline-block;
+  padding: 10px 40px;
+  text-decoration: none;
+  background-color: #164088; 
+  color: white;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  margin-top: 30px;
+  margin-left: 200px;
+}
+
+.email-phone-button-2 {
+  display: inline-block;
+  padding: 10px 40px;
+  text-decoration: none;
+  background-color: #164088; 
+  color: white;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.email-phone-button:hover {
+  background-color: #be5f36;
+}
+
+.email-phone-button-1:hover {
+  background-color: #be5f36;
+}
+
+.email-phone-button-2:hover {
+  background-color: #be5f36;
+}
+
+.profile-photo {
+  width: 240px;
+  height: 240px;
+  position: absolute;
+  right: 40px;
+  top: 250px;
+  transform: translate(-50%, -50%);
+  background-image: url('pp.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  margin-bottom: 28px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 1000px) {
+  .profile-photo {
+    display: none;
+  }
+
+  .email-phone-button{
+    display: none;
+  }
+
+  .rectangle {
+    width: 60%;
+    height: 1700px;
+    margin-top: 480px;
+  }
+}
+</style>
+
+<body>
+  <div class="rectangle">
+      <h1>Malak Hajili</h1>
+      <div class="contact">
+        <div class="subsection">Contact Information:</div>
+        <p><i class='bx bxs-phone-call' ></i>+994 55 267 29 14</p>
+        <p><i class='bx bxs-envelope' ></i> mhajili11330@ada.edu.az</p>
+        <p><i class='bx bxs-location-plus' ></i> Baku, Azerbaijan</p>
+        <p><i class='bx bxl-linkedin-square' ></i> <a style="text-decoration: none;" href="https://www.linkedin.com/in/melek-hajili-37420b293/" target="_blank" class="icon-link">LinkedIn Profile</a></p>
+    </div>
+    
+    <div class="profile-photo"></div>
+
+    <div class="subsection">Objective:</div>
+    <p>Motivated IT student pursuing a Bachelor's degree in Information Technology at ADA University, with a strong passion for project management. Demonstrated proficiency in various IT domains through academic coursework and hands-on projects. Seeking to leverage technical expertise and leadership skills in a dynamic IT environment as a future IT Project Manager.</p>
+
+    <div class="subsection">Languages:</div>
+    <ul>
+        <li>- Azerbaijani</li>
+        <li>- Russian</li>
+        <li>- English</li>
+        <li>- Turkish</li>
+    </ul>
+
+    <div class="subsection">Skills:</div>
+    <ul>
+        <li>Microsoft Office programs: Word, Excel, PowerPoint, Outlook, OneNote</li>
+        <li>Front-end Development: HTML, CSS, JavaScript</li>
+        <li>Graphic Design: Canva</li>
+        <li>Time Management and Communication Skills</li>
+    </ul>
+
+    <div class="subsection">Education:</div>
+    <ul>
+        <li>ADA School (2019-2021)</li>
+        <li>ADA University (2021-2025) - Bachelor of Science in Information Technology</li>
+    </ul>
+
+    <div class="subsection">Experience:</div>
+    <ul>
+        <li>ADA Marketing Club: Social Media Marketing Manager 2022-2023</li>
+        <li>ADAli Magazine: Project Manager 2022-2023</li>
+        <li>Kartonpark Azerbaijan: Social Media Manager 2021-2023</li>
+    </ul>
+
+    <div class="subsection">Hobbies:</div>
+    <ul>
+        <li>- Reading</li>
+        <li>- Traveling</li>
+        <li>- Fitness</li>
+        <li>- Arts</li>
+    </ul>
+
+    <div class="contact-button">
+      <a href="./index.html" target="_blank" class="email-phone-button">Main Page</a>
+  </div>
+
+  <div class="contact-button">
+    <a href="https://github.com/melekhajili/MELEK_WEB" target="_blank" class="email-phone-button-1">GitHub Page</a>
+</div>
+
+<div class="contact-button">
+  <a href="https://github.com/melekhajili" target="_blank" class="email-phone-button-2">GitHub Account</a>
+</div>
+
+</div>
+</body>
+
+</html>

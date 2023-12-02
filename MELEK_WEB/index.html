@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Martel', serif;
+  }
+
+  body {
+      background-image: url("italy.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }
+
+  .rectangle {
+      width: 400px;
+      height: 580px;
+      background-color: rgba(255, 255, 255, 0.86);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 40px;
+      border-radius: 50px 0px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px 0px;
+    background-image: url('pp.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-text {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.secondary-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.divider {
+  border: none;
+  border-top: 2px solid #164088; 
+  margin: 20px auto;
+  width: 80%;
+}
+
+.additional-text {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.email-phone-button {
+    display: inline-block;
+    padding: 10px 40px;
+    text-decoration: none;
+    background-color: #164088; 
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin: 14px ;
+    font-size: 16px;
+}
+
+.email-phone-button:hover {
+    background-color: #be5f36;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 36px;
+  height: 36px;
+  background-color: #164088; 
+  color: white;
+  border-radius: 4px;
+  margin: 0 5px; 
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.icon-link:hover {
+  background-color: #be5f36; 
+}
+
+</style>
+<body>
+  <div class="rectangle">
+    <div class="profile-photo"></div>
+    <div class="header-text">
+      Hi, I'm <span style="color: #164088;">Malak Hajili!</span>
+    </div>
+  <div class="secondary-header">
+    IT student at ADA University.
+  </div>
+  <hr class="divider">
+    <div class="additional-text">
+      Driven by a fervent love for technology and a clear goal of becoming an IT project manager, ADA University is my foundation for acquiring the vital skills and knowledge on this exhilarating path.
+    </div>
+
+    <div class="contact-button">
+      <a href="./resume.html" target="_blank" class="email-phone-button">+994 55 267 29 14 <br> mhajili11330@ada.edu.az</a>
+  </div>
+
+  <div class="icons">
+    <a href="https://instagram.com/hajili_melek?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr" target="_blank" class="icon-link">
+      <i class='bx bxl-instagram' ></i>
+    </a>
+    <a href="https://pin.it/7Fd4fd1" target="_blank" class="icon-link">
+      <i class='bx bxl-pinterest'></i>
+    </a>
+    <a href="https://twitter.com/hajili_melek" target="_blank" class="icon-link">
+      <i class='bx bxl-twitter' ></i>
+    </a>
+    <a href="https://www.linkedin.com/in/melek-hajili-37420b293/" target="_blank" class="icon-link">
+      <i class='bx bxl-linkedin' ></i>
+    </a>
+    <a href="https://www.youtube.com/@melek_hajili" target="_blank" class="icon-link">
+      <i class='bx bxl-youtube' ></i>
+    </a>
+    <a href="https://github.com/melekhajili" target="_blank" class="icon-link">
+      <i class='bx bxl-github'></i>
+    </a>
+    <a href="./resume.html" target="_blank" class="icon-link">
+      <i class='bx bxs-user-pin' ></i>
+    </a>
+</div>
+</div>
+</body>
+</html>
