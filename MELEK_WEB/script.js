@@ -44,3 +44,31 @@ function displayProductInfoPage(product) {
   console.log('Product Clicked:', product);
 }
 
+// 4.	Data display (3)
+// a.	On the home page, provide the following features
+// i.	Search for a keyword (it can be a part of title, desc, or even category) (15pts)
+// ii.	Filter based on the given category (all categories are to be provided a sa select box and choosing any category from the list filters the list of all the products) (15 pts)
+// b.	Use API documentation to explore available ones and their usage.
+
+function filterProducts() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const selectedCategory = categorySelect.value.toLowerCase();
+
+  const filteredProducts = data.filter((product) => {
+    const titleMatch = product.title.toLowerCase().includes(searchTerm);
+    const categoryMatch =
+      product.category.toLowerCase() === selectedCategory || selectedCategory === 'all';
+
+    return titleMatch && categoryMatch;
+  });
+
+  displayFilteredProducts(filteredProducts, 1); 
+  displayPagination(filteredProducts.length);
+}
+
+searchInput.addEventListener('input', filterProducts);
+categorySelect.addEventListener('change', filterProducts);
+
+filterProducts();
+
+
