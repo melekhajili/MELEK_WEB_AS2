@@ -12,3 +12,23 @@ async function fetchData() {
   }
 }
 
+// 2.	Data display (1) (20 pts)
+// a.	Display the data on the home web page. Each product should include the title, price, discount, category, and stock as well as the thumbnail.
+// b.	Ensure the display is well-formatted and readable.
+
+function displayDataOnHomePage(data) {
+  const productListContainer = document.getElementById('product-list');
+  
+  data.forEach((product) => {
+    const productElement = document.createElement('div');
+    productElement.innerHTML = `
+      <h3>${product.title}</h3>
+      <p>Price: ${product.price}</p>
+      <p>Discount: ${product.discount}</p>
+      <p>Category: ${product.category}</p>
+      <p>Stock: ${product.stock}</p>
+      <img src="${product.thumbnail}" alt="${product.title} Thumbnail">
+    `;
+    productListContainer.appendChild(productElement);
+  });
+}
