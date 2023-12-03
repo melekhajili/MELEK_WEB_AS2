@@ -32,3 +32,15 @@ function displayDataOnHomePage(data) {
     productListContainer.appendChild(productElement);
   });
 }
+
+// 3.	Data display (2) (20 pts)
+// a.	When a product is clicked a new product info page is opened with the detailed information as well as the gallery of the product.
+
+productElement.addEventListener('click', () => {
+  displayProductInfoPage(product);
+});
+
+function displayProductInfoPage(product) {
+  console.log('Product Clicked:', product);
+}
+
