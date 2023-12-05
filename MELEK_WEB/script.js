@@ -1,11 +1,16 @@
+
+const searchInput = document.getElementById('searchInput');
+const categorySelect = document.getElementById('categorySelect');
+
 // 1. API integration (20pts)
 // a. Use JavaScript to fetch data from dummyjson.com about products from /products endpoint.
 // b. Handle any potential errors during the fetch operation.
 
+let data; // Declare data globally
 async function fetchData() {
   try {
     const response = await fetch('https://dummyjson.com/products');
-    const data = await response.json();
+    data = await response.json();
     return data;
   } catch (error) {
     console.error('Error fetching data:', error);
@@ -33,8 +38,7 @@ function createProductElement(product) {
 
 function displayDataOnHomePage(data) {
   const productListContainer = document.getElementById('product-list');
-
-  data.forEach((product) => {
+  data.products.forEach((product) => {
     const productElement = createProductElement(product);
     productListContainer.appendChild(productElement);
   });
@@ -53,30 +57,25 @@ function displayProductInfoPage(product) {
 // ii. Filter based on the given category (all categories are to be provided a sa select box and choosing any category from the list filters the list of all the products) (15 pts)
 // b. Use API documentation to explore available ones and their usage.
 
-const searchInput = document.getElementById('searchInput');
-const categorySelect = document.getElementById('categorySelect');
 
-searchInput.addEventListener('input', () => filterProducts(data));
-categorySelect.addEventListener('change', () => filterProducts(data));
+searchInput.addEventListener('input', () => filterProducts());
+categorySelect.addEventListener('change', () => filterProducts());
 
-function filterProducts(data) {
-  const searchTerm = searchInput.value.toLowerCase();
-  const selectedCategory = categorySelect.value.toLowerCase();
+function filterProducts(page = 1) {
+const searchTerm = searchInput.value.toLowerCase();
 
-  const filteredProducts = data.filter((product) => {
-    const titleMatch = product.title.toLowerCase().includes(searchTerm);
-    const categoryMatch =
-      product.category.toLowerCase() === selectedCategory || selectedCategory === 'all';
+const filteredProducts = data.products.filter((product) => {
+const titleMatch = product.title.toLowerCase().includes(searchTerm);
+return titleMatch;
+});
 
-    return titleMatch && categoryMatch;
-  });
-
-  displayFilteredProducts(filteredProducts, 1);
-  displayPagination(filteredProducts.length);
+displayFilteredProducts(filteredProducts, page);
+displayPagination(filteredProducts.length, page);
 }
 
 // 5. Apply pagination (Bonus) (10 pts)
 // a. If the result of any response holds more than 10 objects, show only 10 products. Implement pagination navigation at the bottom of the list.
+
 
 const itemsPerPage = 10;
 const paginationContainer = document.getElementById('pagination-container');
@@ -95,7 +94,7 @@ function displayFilteredProducts(filteredProducts, page) {
   });
 }
 
-function displayPagination(totalItems) {
+function displayPagination(totalItems, page) {
   paginationContainer.innerHTML = '';
 
   const totalPages = Math.ceil(totalItems / itemsPerPage);
@@ -103,16 +102,16 @@ function displayPagination(totalItems) {
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement('button');
     pageButton.textContent = i;
-    pageButton.addEventListener('click', () => filterProducts(data, i)); 
+    pageButton.addEventListener('click', () => filterProducts(i)); 
     paginationContainer.appendChild(pageButton);
   }
 }
 
 (async () => {
   try {
-    const data = await fetchData();
+    await fetchData();
     displayDataOnHomePage(data);
-    filterProducts(data);
+    filterProducts();
   } catch (error) {
     console.error('Error initializing:', error);
   }
